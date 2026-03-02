@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {{ site.nazwa }}{% else %}{{ site.nazwa }}{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.opis }}{% endif %}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if title %}{{ title }} | {{ site.nazwa }}{% else %}{{ site.nazwa }}{% endif %}">
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.opis }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% if cover %}<meta property="og:image" content="{{ site.url }}{{ cover }}">{% endif %}
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  {% include "components/navbar.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "components/footer.njk" %}
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

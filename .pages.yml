@@ -1,0 +1,177 @@
+media:
+  input: src/assets/images
+
+content:
+  - name: posty
+    label: Posty bloga
+    path: src/posty
+    type: collection
+    view:
+      fields: [title, date, autor]
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+        required: true
+      - name: date
+        label: Data publikacji
+        type: date
+        required: true
+      - name: autor
+        label: Autor
+        type: string
+        required: true
+      - name: tagi
+        label: Tagi
+        type: list
+        subtype: string
+      - name: cover
+        label: Zdjęcie główne
+        type: image
+      - name: opis
+        label: Krótki opis
+        type: text
+      - name: body
+        label: Treść
+        type: rich-text
+
+  - name: site
+    label: Ustawienia globalne
+    path: src/_data/site.json
+    type: file
+    fields:
+      - name: nazwa
+        label: Nazwa strony
+        type: string
+      - name: opis
+        label: Opis strony
+        type: text
+      - name: url
+        label: URL strony
+        type: string
+      - name: social
+        label: Social media
+        type: object
+        fields:
+          - name: facebook
+            label: Facebook URL
+            type: string
+          - name: instagram
+            label: Instagram URL
+            type: string
+          - name: github
+            label: GitHub URL
+            type: string
+          - name: linkedin
+            label: LinkedIn URL
+            type: string
+      - name: kontakt
+        label: Kontakt
+        type: object
+        fields:
+          - name: email
+            label: Email
+            type: string
+          - name: adres
+            label: Adres
+            type: string
+
+  - name: homepage
+    label: Strona główna
+    path: src/_data/homepage.json
+    type: file
+    fields:
+      - name: hero_tytul
+        label: Tytuł hero
+        type: string
+      - name: hero_slogan
+        label: Slogan
+        type: string
+      - name: hero_cta_tekst
+        label: Tekst przycisku CTA
+        type: string
+      - name: hero_cta_link
+        label: Link przycisku CTA
+        type: string
+      - name: onas_tytul
+        label: Tytuł sekcji O nas
+        type: string
+      - name: onas_tresc
+        label: Treść sekcji O nas
+        type: rich-text
+      - name: odnogi
+        label: Odnogi organizacji
+        type: list
+        fields:
+          - name: nazwa
+            label: Nazwa
+            type: string
+          - name: opis
+            label: Opis
+            type: text
+          - name: link
+            label: Link
+            type: string
+          - name: ikona
+            label: Ikona (emoji lub SVG)
+            type: string
+
+  - name: kolo
+    label: Koło naukowe
+    path: src/_data/kolo.json
+    type: file
+    fields:
+      - name: hero_tytul
+        label: Tytuł hero
+        type: string
+      - name: hero_opis
+        label: Opis hero
+        type: text
+      - name: opis_tytul
+        label: Tytuł sekcji opis
+        type: string
+      - name: opis_tresc
+        label: Treść opisu
+        type: rich-text
+      - name: czlonkowie
+        label: Członkowie zespołu
+        type: list
+        fields:
+          - name: imie
+            label: Imię i nazwisko
+            type: string
+          - name: rola
+            label: Rola
+            type: string
+          - name: bio
+            label: Bio
+            type: text
+          - name: zdjecie
+            label: Zdjęcie
+            type: image
+      - name: projekty
+        label: Projekty
+        type: list
+        fields:
+          - name: nazwa
+            label: Nazwa projektu
+            type: string
+          - name: opis
+            label: Opis projektu
+            type: text
+          - name: status
+            label: Status
+            type: select
+            options: [Aktywny, Zakończony, Planowany]
+          - name: link
+            label: Link do projektu
+            type: string
+      - name: dolacz_tytul
+        label: Tytuł sekcji Dołącz
+        type: string
+      - name: dolacz_tresc
+        label: Treść sekcji Dołącz
+        type: text
+      - name: dolacz_email
+        label: Email rekrutacyjny
+        type: string

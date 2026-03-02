@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+title: Strona główna
+---
+
+<!-- Hero Section -->
+<section class="hero" aria-label="Baner główny">
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ homepage.hero_tytul }}</h1>
+      <p class="hero-slogan">{{ homepage.hero_slogan }}</p>
+      <div class="hero-cta-group">
+        <a href="{{ homepage.hero_cta_link }}" class="btn btn-primary btn-lg">
+          {{ homepage.hero_cta_tekst }}
+        </a>
+        <a href="/posty/" class="btn btn-secondary btn-lg">Nasz blog</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="/assets/images/logo.svg" alt="" width="200" height="200">
+    </div>
+  </div>
+</section>
+
+<!-- O nas Section -->
+<section class="section-onas" aria-labelledby="onas-title">
+  <div class="container">
+    <h2 id="onas-title">{{ homepage.onas_tytul }}</h2>
+    <div class="onas-content">
+      {{ homepage.onas_tresc | safe }}
+    </div>
+  </div>
+</section>
+
+<!-- Wyróżnione posty -->
+<section class="section-posty" aria-labelledby="posty-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="posty-title">Najnowsze posty</h2>
+      <a href="/posty/" class="btn btn-secondary">Zobacz wszystkie</a>
+    </div>
+    <div class="posts-grid">
+      {% for post in collections.posty | limit(3) %}
+        {% set post = post %}
+        {% include "components/post-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Nasze odnogi -->
+<section class="section-odnogi" aria-labelledby="odnogi-title">
+  <div class="container">
+    <h2 id="odnogi-title">Nasze odnogi</h2>
+    <div class="odnogi-grid">
+      {% for odnoga in homepage.odnogi %}
+      <a href="{{ odnoga.link }}" class="odnoga-card" {% if odnoga.link == '#' %}aria-disabled="true"{% endif %}>
+        <div class="odnoga-icon" aria-hidden="true">{{ odnoga.ikona }}</div>
+        <h3>{{ odnoga.nazwa }}</h3>
+        <p>{{ odnoga.opis }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,5 @@
+[
+  { "label": "Strona główna", "url": "/" },
+  { "label": "Koło Naukowe", "url": "/kolo/" },
+  { "label": "Blog", "url": "/posty/" }
+]

@@ -1,0 +1,73 @@
+{
+  "hero_tytul": "Koło Naukowe Polibudex",
+  "hero_opis": "Rozwijamy projekty technologiczne, prowadzimy badania i organizujemy hackathony. Dołącz do nas!",
+  "opis_tytul": "Czym się zajmujemy?",
+  "opis_tresc": "<p>Koło Naukowe Polibudex to miejsce dla studentów, którzy chcą wyjść poza program studiów i realizować własne projekty technologiczne. Zajmujemy się programowaniem, elektroniką, sztuczną inteligencją i nowymi technologiami.</p><p>Regularnie organizujemy hackathony, warsztaty programistyczne, spotkania z ekspertami z branży IT oraz wyjazdy na konferencje naukowe. Nasi członkowie mają dostęp do sprzętu, narzędzi i mentoringu ze strony bardziej doświadczonych kolegów.</p>",
+  "czlonkowie": [
+    {
+      "imie": "Piotr Wiśniewski",
+      "rola": "Prezes Koła",
+      "bio": "Student informatyki, pasjonat AI i machine learning. Organizuje hackathony i warsztaty.",
+      "zdjecie": "/assets/images/placeholder.svg"
+    },
+    {
+      "imie": "Marta Kowalczyk",
+      "rola": "Wiceprezes",
+      "bio": "Studentka inżynierii oprogramowania, specjalizuje się w aplikacjach webowych i UX/UI.",
+      "zdjecie": "/assets/images/placeholder.svg"
+    },
+    {
+      "imie": "Tomasz Nowak",
+      "rola": "Kierownik projektów",
+      "bio": "Entuzjasta elektroniki i IoT, prowadzi projekty związane z robotyką.",
+      "zdjecie": "/assets/images/placeholder.svg"
+    },
+    {
+      "imie": "Karolina Zając",
+      "rola": "Sekretarz",
+      "bio": "Studentka matematyki stosowanej, zajmuje się analizą danych i wizualizacjami.",
+      "zdjecie": "/assets/images/placeholder.svg"
+    },
+    {
+      "imie": "Michał Dąbrowski",
+      "rola": "Członek",
+      "bio": "Pasjonat cyberbezpieczeństwa i sieci komputerowych.",
+      "zdjecie": "/assets/images/placeholder.svg"
+    },
+    {
+      "imie": "Aleksandra Lewandowska",
+      "rola": "Członek",
+      "bio": "Studentka automatyki, interesuje się robotyką i sterowaniem.",
+      "zdjecie": "/assets/images/placeholder.svg"
+    }
+  ],
+  "projekty": [
+    {
+      "nazwa": "SmartCampus",
+      "opis": "Aplikacja mobilna do zarządzania przestrzenią kampusu – rezerwacja sal, informacje o wydarzeniach, mapa uczelniana.",
+      "status": "Aktywny",
+      "link": "#"
+    },
+    {
+      "nazwa": "PoliBot",
+      "opis": "Chatbot oparty o AI, który odpowiada na pytania studentów dotyczące planu zajęć, wymagań egzaminacyjnych i życia studenckiego.",
+      "status": "Aktywny",
+      "link": "#"
+    },
+    {
+      "nazwa": "DataViz Academy",
+      "opis": "Platforma e-learningowa z kursami wizualizacji danych, stworzona przez studentów dla studentów.",
+      "status": "Zakończony",
+      "link": "#"
+    },
+    {
+      "nazwa": "EcoSensor",
+      "opis": "Sieć czujników IoT monitorujących jakość powietrza na kampusie – projekt badawczy.",
+      "status": "Planowany",
+      "link": "#"
+    }
+  ],
+  "dolacz_tytul": "Dołącz do Koła Naukowego",
+  "dolacz_tresc": "Jesteś studentem i chcesz rozwijać swoje umiejętności techniczne? Dołącz do naszego Koła Naukowego! Rekrutacja odbywa się na początku każdego semestru. Napisz do nas, a odpiszemy ze szczegółami.",
+  "dolacz_email": "kolo@polibudex.pl"
+}

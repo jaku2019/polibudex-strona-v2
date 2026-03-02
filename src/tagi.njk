@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.tagi
+  size: 1
+  alias: tag
+permalink: /posty/tag/{{ tag | slugify }}/
+eleventyComputed:
+  title: "Tag: {{ tag }}"
+  description: "Posty z tagiem {{ tag }} - blog Polibudex"
+  activeTag: "{{ tag }}"
+---
+
+<section class="section-blog" aria-labelledby="tag-title">
+  <div class="container">
+    <div class="section-header">
+      <h1 id="tag-title">
+        <a href="/posty/" class="breadcrumb-link">Blog</a>
+        <span aria-hidden="true"> / </span>
+        Tag: <span class="tag-highlight">{{ tag }}</span>
+      </h1>
+    </div>
+
+    <!-- Tagi nawigacja -->
+    <div class="tags-filter" role="navigation" aria-label="Filtrowanie po tagach">
+      <a href="/posty/" class="tag tag-filter">Wszystkie</a>
+      {% for t in collections.tagi %}
+      <a href="/posty/tag/{{ t | slugify }}/" class="tag tag-filter {% if t == tag %}active{% endif %}">{{ t }}</a>
+      {% endfor %}
+    </div>
+
+    <div class="posts-grid posts-grid-full">
+      {% set tagPosts = collections.posty | filterByTag(tag) %}
+      {% for post in tagPosts %}
+        {% include "components/post-card.njk" %}
+      {% endfor %}
+    </div>
+
+    {% set tagPosts = collections.posty | filterByTag(tag) %}
+    {% if tagPosts.length == 0 %}
+    <div class="empty-state">
+      <p>Brak postów z tagiem "{{ tag }}".</p>
+      <a href="/posty/" class="btn btn-secondary">Powrót do bloga</a>
+    </div>
+    {% endif %}
+  </div>
+</section>

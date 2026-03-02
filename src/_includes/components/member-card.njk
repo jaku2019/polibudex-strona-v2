@@ -1,0 +1,12 @@
+<div class="member-card">
+  <div class="member-card-image">
+    <img src="{{ member.zdjecie if member.zdjecie else '/assets/images/placeholder.svg' }}" alt="{{ member.imie }}" loading="lazy">
+  </div>
+  <div class="member-card-body">
+    <h3 class="member-card-name">{{ member.imie }}</h3>
+    <p class="member-card-rola">{{ member.rola }}</p>
+    {% if member.bio %}
+    <p class="member-card-bio">{{ member.bio }}</p>
+    {% endif %}
+  </div>
+</div>
