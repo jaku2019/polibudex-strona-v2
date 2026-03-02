@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+title: Blog
+description: Blog organizacji studenckiej Polibudex - aktualności, relacje z wydarzeń i poradniki
+permalink: /posty/
+---
+
+<section class="section-blog" aria-labelledby="blog-title">
+  <div class="container">
+    <div class="section-header">
+      <h1 id="blog-title">Blog</h1>
+      <p class="section-subtitle">Aktualności, relacje z wydarzeń i poradniki dla studentów</p>
+    </div>
+
+    <!-- Tagi filtrowania -->
+    {% set allTags = collections.tagi %}
+    {% if allTags.length > 0 %}
+    <div class="tags-filter" role="navigation" aria-label="Filtrowanie po tagach">
+      <a href="/posty/" class="tag tag-filter {% if not activeTag %}active{% endif %}">Wszystkie</a>
+      {% for tag in allTags %}
+      <a href="/posty/tag/{{ tag | slugify }}/" class="tag tag-filter {% if activeTag == tag %}active{% endif %}">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Lista postów -->
+    <div class="posts-grid posts-grid-full" id="postsGrid">
+      {% for post in collections.posty %}
+        {% include "components/post-card.njk" %}
+      {% endfor %}
+    </div>
+
+    {% if collections.posty.length == 0 %}
+    <div class="empty-state">
+      <p>Brak postów. Wróć wkrótce!</p>
+    </div>
+    {% endif %}
+  </div>
+</section>

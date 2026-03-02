@@ -1,0 +1,30 @@
+<article class="post-card" data-tagi="{{ post.data.tagi | join(',') if post.data.tagi else '' }}">
+  <a href="{{ post.url }}" class="post-card-link" aria-label="{{ post.data.title }}">
+    <div class="post-card-image">
+      {% if post.data.cover %}
+      <img src="{{ post.data.cover }}" alt="{{ post.data.title }}" loading="lazy">
+      {% else %}
+      <img src="/assets/images/placeholder.svg" alt="{{ post.data.title }}" loading="lazy">
+      {% endif %}
+    </div>
+    <div class="post-card-body">
+      <div class="post-card-meta">
+        <time datetime="{{ post.date | dateISO }}">{{ post.date | dateFormat }}</time>
+        {% if post.data.autor %}
+        <span class="post-card-autor">{{ post.data.autor }}</span>
+        {% endif %}
+      </div>
+      <h3 class="post-card-title">{{ post.data.title }}</h3>
+      {% if post.data.opis %}
+      <p class="post-card-opis">{{ post.data.opis }}</p>
+      {% endif %}
+      {% if post.data.tagi %}
+      <div class="post-card-tagi">
+        {% for tag in post.data.tagi %}
+        <a href="/posty/tag/{{ tag | slugify }}/" class="tag" aria-label="Tag: {{ tag }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </a>
+</article>

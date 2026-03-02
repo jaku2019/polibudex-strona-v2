@@ -1,0 +1,7 @@
+{% if tagi %}
+<div class="tag-list" role="list">
+  {% for tag in tagi %}
+  <a href="/posty/tag/{{ tag | slugify }}/" class="tag" role="listitem" aria-label="Tag: {{ tag }}">{{ tag }}</a>
+  {% endfor %}
+</div>
+{% endif %}

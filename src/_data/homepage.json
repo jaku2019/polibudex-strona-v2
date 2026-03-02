@@ -1,0 +1,34 @@
+{
+  "hero_tytul": "Polibudex",
+  "hero_slogan": "Organizacja studencka łącząca pasjonatów nauki, technologii i kultury studenckiej. Dołącz do nas i rozwijaj swoje pasje!",
+  "hero_cta_tekst": "Dołącz do nas",
+  "hero_cta_link": "/kolo/",
+  "onas_tytul": "O nas",
+  "onas_tresc": "<p>Polibudex to dynamiczna organizacja studencka działająca na uczelni technicznej. Skupiamy studentów o różnorodnych zainteresowaniach – od nauki i technologii, przez kulturę i sport, po działalność społeczną.</p><p>Naszą misją jest tworzenie przestrzeni, w której każdy student może rozwijać swoje pasje, zdobywać nowe umiejętności i budować wartościowe relacje. Organizujemy hackathony, warsztaty, wykłady i wydarzenia integracyjne.</p><p>Działamy w kilku obszarach tematycznych zwanych odnogami – każda z nich skupia się na konkretnej dziedzinie i oferuje unikalne możliwości rozwoju.</p>",
+  "odnogi": [
+    {
+      "nazwa": "Koło Naukowe",
+      "opis": "Rozwijamy projekty badawcze i technologiczne, organizujemy hackathony i warsztaty programistyczne.",
+      "link": "/kolo/",
+      "ikona": "🔬"
+    },
+    {
+      "nazwa": "Kultura i Media",
+      "opis": "Tworzymy treści, organizujemy wydarzenia kulturalne i prowadzimy media studenckie.",
+      "link": "/posty/",
+      "ikona": "🎨"
+    },
+    {
+      "nazwa": "Sport i Rekreacja",
+      "opis": "Organizujemy turnieje sportowe, wyjazdy integracyjne i aktywny wypoczynek.",
+      "link": "#",
+      "ikona": "⚽"
+    },
+    {
+      "nazwa": "Rozwój Osobisty",
+      "opis": "Warsztaty miękkie, szkolenia, mentoring i spotkania z ekspertami z branży.",
+      "link": "#",
+      "ikona": "🚀"
+    }
+  ]
+}

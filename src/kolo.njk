@@ -1,0 +1,75 @@
+---
+layout: layouts/base.njk
+title: Koło Naukowe
+description: Koło Naukowe Polibudex - projekty technologiczne, hackathony i warsztaty
+permalink: /kolo/
+---
+
+<!-- Hero -->
+<section class="hero hero-sm" aria-label="Koło Naukowe">
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ kolo.hero_tytul }}</h1>
+      <p class="hero-slogan">{{ kolo.hero_opis }}</p>
+      <a href="#dolacz" class="btn btn-primary btn-lg">Dołącz do nas</a>
+    </div>
+  </div>
+</section>
+
+<!-- Opis -->
+<section class="section-opis" aria-labelledby="opis-title">
+  <div class="container">
+    <h2 id="opis-title">{{ kolo.opis_tytul }}</h2>
+    <div class="opis-content">
+      {{ kolo.opis_tresc | safe }}
+    </div>
+  </div>
+</section>
+
+<!-- Zespół -->
+<section class="section-zespol" aria-labelledby="zespol-title">
+  <div class="container">
+    <h2 id="zespol-title">Nasz zespół</h2>
+    <div class="members-grid">
+      {% for member in kolo.czlonkowie %}
+        {% include "components/member-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Projekty -->
+<section class="section-projekty" aria-labelledby="projekty-title">
+  <div class="container">
+    <h2 id="projekty-title">Nasze projekty</h2>
+    <div class="projekty-list">
+      {% for projekt in kolo.projekty %}
+      <div class="projekt-card">
+        <div class="projekt-header">
+          <h3>{{ projekt.nazwa }}</h3>
+          <span class="status status-{{ projekt.status | lower | replace(' ', '-') }}">{{ projekt.status }}</span>
+        </div>
+        <p>{{ projekt.opis }}</p>
+        {% if projekt.link and projekt.link != '#' %}
+        <a href="{{ projekt.link }}" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+          Zobacz projekt
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Dołącz -->
+<section class="section-dolacz" id="dolacz" aria-labelledby="dolacz-title">
+  <div class="container">
+    <div class="dolacz-inner">
+      <h2 id="dolacz-title">{{ kolo.dolacz_tytul }}</h2>
+      <p>{{ kolo.dolacz_tresc }}</p>
+      <a href="mailto:{{ kolo.dolacz_email }}" class="btn btn-primary btn-lg">
+        Napisz do nas: {{ kolo.dolacz_email }}
+      </a>
+    </div>
+  </div>
+</section>

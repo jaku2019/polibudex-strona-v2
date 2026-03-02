@@ -1,0 +1,15 @@
+{
+  "nazwa": "Polibudex",
+  "opis": "Organizacja studencka Politechniki łącząca pasjonatów nauki, technologii i kultury studenckiej.",
+  "url": "https://jaku2019.github.io/polibudex-strona-v2",
+  "social": {
+    "facebook": "https://facebook.com/polibudex",
+    "instagram": "https://instagram.com/polibudex",
+    "github": "https://github.com/polibudex",
+    "linkedin": ""
+  },
+  "kontakt": {
+    "email": "kontakt@polibudex.pl",
+    "adres": "Politechnika, ul. Akademicka 1, Polska"
+  }
+}

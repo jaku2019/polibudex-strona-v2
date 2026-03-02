@@ -1,0 +1,24 @@
+<nav class="navbar" role="navigation" aria-label="Nawigacja główna">
+  <div class="navbar-inner">
+    <a href="/" class="navbar-brand" aria-label="{{ site.nazwa }} - strona główna">
+      <img src="/assets/images/logo.svg" alt="{{ site.nazwa }} logo" width="32" height="32">
+      <span>{{ site.nazwa }}</span>
+    </a>
+
+    <button class="navbar-toggle" id="navbarToggle" aria-expanded="false" aria-controls="navbarMenu" aria-label="Otwórz menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="navbar-menu" id="navbarMenu" role="list">
+      {% for item in navigation %}
+      <li>
+        <a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page" class="active"{% endif %}>
+          {{ item.label }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

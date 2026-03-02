@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+---
+<article class="post-single">
+  <header class="post-header container">
+    {% if cover %}
+    <div class="post-cover">
+      <img src="{{ cover }}" alt="{{ title }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="post-meta">
+      <time datetime="{{ date | dateISO }}">{{ date | dateFormat }}</time>
+      {% if autor %}<span class="post-autor">przez {{ autor }}</span>{% endif %}
+    </div>
+    <h1>{{ title }}</h1>
+    {% if tagi %}
+    <div class="post-tagi">
+      {% include "components/tag-list.njk" %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content container">
+    {{ content | safe }}
+  </div>
+
+  <footer class="post-footer container">
+    <a href="/posty/" class="btn btn-secondary">&larr; Powrót do bloga</a>
+  </footer>
+</article>
