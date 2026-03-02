@@ -1,4 +1,9 @@
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function(eleventyConfig) {
+  // Rewrite URLs in HTML output to include pathPrefix
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("src/assets");
 
@@ -50,6 +55,7 @@ module.exports = function(eleventyConfig) {
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    templateFormats: ["njk", "md", "html"]
+    templateFormats: ["njk", "md", "html"],
+    pathPrefix: "/polibudex-strona-v2/"
   };
 };

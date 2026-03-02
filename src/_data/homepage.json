@@ -4,5 +4,31 @@
   "hero_cta_tekst": "Dołącz do nas",
   "hero_cta_link": "/kolo/",
   "onas_tytul": "O nas",
-  "onas_tresc": "Polibudex to dynamiczna organizacja studencka działająca na uczelni technicznej. Skupiamy studentów o różnorodnych zainteresowaniach – od nauki i technologii, przez kulturę i sport, po działalność społeczną.\n\nNaszą misją jest tworzenie przestrzeni, w której każdy student może rozwijać swoje pasje, zdobywać nowe umiejętności i budować wartościowe relacje. Organizujemy hackathony, warsztaty, wykłady i wydarzenia integracyjne.\n\nDziałamy w kilku obszarach tematycznych zwanych odnogami – każda z nich skupia się na konkretnej dziedzinie i oferuje unikalne możliwości rozwoju."
+  "onas_tresc": "<p>Polibudex to dynamiczna organizacja studencka działająca na uczelni technicznej. Skupiamy studentów o różnorodnych zainteresowaniach – od nauki i technologii, przez kulturę i sport, po działalność społeczną.</p><p>Naszą misją jest tworzenie przestrzeni, w której każdy student może rozwijać swoje pasje, zdobywać nowe umiejętności i budować wartościowe relacje. Organizujemy hackathony, warsztaty, wykłady i wydarzenia integracyjne.</p><p>Działamy w kilku obszarach tematycznych zwanych odnogami – każda z nich skupia się na konkretnej dziedzinie i oferuje unikalne możliwości rozwoju.</p>",
+  "odnogi": [
+    {
+      "nazwa": "Koło Naukowe",
+      "opis": "Projekty technologiczne, hackathony i warsztaty programistyczne.",
+      "link": "/kolo/",
+      "ikona": "🔬"
+    },
+    {
+      "nazwa": "Kultura i Media",
+      "opis": "Tworzenie treści, organizacja wydarzeń kulturalnych i mediów studenckich.",
+      "link": "#",
+      "ikona": "🎨"
+    },
+    {
+      "nazwa": "Sport i Rekreacja",
+      "opis": "Aktywność fizyczna, turnieje sportowe i wyjazdy rekreacyjne.",
+      "link": "#",
+      "ikona": "⚽"
+    },
+    {
+      "nazwa": "Rozwój Osobisty",
+      "opis": "Warsztaty umiejętności miękkich, mentoring i networking zawodowy.",
+      "link": "#",
+      "ikona": "🚀"
+    }
+  ]
 }
