@@ -3,7 +3,7 @@ title: Trzeci egzamin Polibudexu 2026
 date: 2026-11-15
 autor: Kuba
 tagi: ["wydarzenia"]
-cover: src/assets/images/634675581_901655042859718_5472797924988591878_n.png
+cover: /assets/images/634675581_901655042859718_5472797924988591878_n.png
 opis: 8 godzin nieprzerwanej zabawy ludzi różnych środowisk, wydziałów, a nawet
   miast.
 ---

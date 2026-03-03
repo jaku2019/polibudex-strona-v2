@@ -1,5 +1,6 @@
 media:
   input: src/assets/images
+  output: /assets/images
 
 content:
   - name: posty
