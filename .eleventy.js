@@ -56,6 +56,6 @@ module.exports = function(eleventyConfig) {
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     templateFormats: ["njk", "md", "html"],
-    pathPrefix: "/polibudex-strona-v2/"
+    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "/"
   };
 };
