@@ -1,49 +1,13 @@
 ---
-title: "Hackathon 2026 – relacja z wydarzenia"
+title: Trzeci egzamin Polibudexu 2026
 date: 2026-11-15
-autor: "Jan Kowalski"
-tagi:
-  - koło naukowe
-  - hackathon
-  - wydarzenia
-cover: /assets/images/placeholder.svg
-opis: "Przez 48 godzin 12 zespołów rywalizowało o tytuł najlepszego projektu technologicznego. Oto jak to wyglądało od środka."
-permalink: /posty/hackathon-2026/
+autor: Kuba
+cover: src/assets/images/634675581_901655042859718_5472797924988591878_n.png
+opis: 8 godzin nieprzerwanej zabawy ludzi różnych środowisk, wydziałów, a nawet
+  miast.
 ---
+# Trzeci egzamin Polibudexu
 
-## Hackathon Polibudex 2026 – relacja z wydarzenia
+6 lutego 2026 roku, a więc w samym środku sesji, odbyła się trzecia edycja egzaminu Polibudexu. Nowością były przekąski przygotowane przez Konrada i Janka oraz półroczne sprawozdanie zarządu z wideoprezentacją. Warty odnotowania pozostaje również fakt wirtualnej obecności Szefa pomimo niedyspozycyjności poprzez Skype'a.
 
-Miniony weekend upłynął pod znakiem intensywnego programowania, innowacyjnych pomysłów i świetnej kawy. Hackathon Polibudex 2026 przeszedł do historii jako jedno z najlepszych wydarzeń w historii organizacji!
-
-![Hackathon Polibudex 2026](/assets/images/placeholder.svg)
-
-### 48 godzin kodu
-
-W wydarzeniu wzięło udział **12 zespołów** liczących łącznie **47 uczestników**. Przez dwie doby nieustannie brzęczały klawiaturami laptopy, a na białych tablicach powstawały diagramy architektoniczne i szkice interfejsów.
-
-Tematem tegorocznego hackathonu było **"Technologia dla kampusu"** – każdy zespół miał za zadanie stworzyć rozwiązanie, które realnie poprawiłoby codzienne życie studenta.
-
-### Projekty uczestników
-
-Wśród nadesłanych projektów znalazły się m.in.:
-
-- **CampusMap** – interaktywna mapa uczelni z nawigacją
-- **StudyBuddy** – platforma do organizowania grup studyjnych
-- **MealPlan** – aplikacja planująca obiady w stołówce
-- **BusTracker** – śledzenie autobusów uczelnianego transportu w czasie rzeczywistym
-
-### Wyniki
-
-🥇 **1. miejsce** – Zespół "ByteForce" z projektem **StudyBuddy**  
-🥈 **2. miejsce** – Zespół "CodeCrafters" z projektem **CampusMap**  
-🥉 **3. miejsce** – Zespół "DebugDragons" z projektem **BusTracker**
-
-### Podsumowanie
-
-Hackathon udowodnił, że studenci Politechniki mają ogromny potencjał i kreatywność. Wszystkie projekty były na wysokim poziomie technicznym i naprawdę innowacyjne.
-
-Gratulujemy wszystkim uczestnikom! Do zobaczenia na Hackathonie 2027!
-
----
-
-*Jan Kowalski, Koło Naukowe Polibudex*
+Internet jak papier przyjmie wszystko, ale w odróżnieniu od niego nie zapomina... więc więcej pisać nie będę. Kto pamięta, ten wie, że _się działo_.
