@@ -6,13 +6,18 @@ layout: layouts/base.njk
     {% if cover %}
     <div class="post-cover">
       <img src="{{ cover }}" alt="{{ title }}" loading="lazy">
+      <div class="post-cover-overlay">
+        <h1 class="post-cover-title">{{ title }}</h1>
+      </div>
     </div>
     {% endif %}
     <div class="post-meta">
       <time datetime="{{ date | dateISO }}">{{ date | dateFormat }}</time>
       {% if autor %}<span class="post-autor">przez {{ autor }}</span>{% endif %}
     </div>
+    {% if not cover %}
     <h1>{{ title }}</h1>
+    {% endif %}
     {% if tagi %}
     <div class="post-tagi">
       {% include "components/tag-list.njk" %}
