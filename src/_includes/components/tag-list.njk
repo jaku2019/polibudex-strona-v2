@@ -1,6 +1,7 @@
-{% if tagi %}
+{% set normalizedTagi = tagi | normalizeTagi %}
+{% if normalizedTagi.length %}
 <div class="tag-list" role="list">
-  {% for tag in tagi %}
+  {% for tag in normalizedTagi %}
   <a href="/posty/tag/{{ tag | slugify }}/" class="tag" role="listitem" aria-label="Tag: {{ tag }}">{{ tag }}</a>
   {% endfor %}
 </div>

@@ -1,4 +1,4 @@
-<article class="post-card" data-tagi="{{ post.data.tagi | join(',') if post.data.tagi else '' }}">
+<article class="post-card" data-tagi="{{ post.data.tagi | normalizeTagi | join(',') }}">
   <a href="{{ post.url }}" class="post-card-link" aria-label="{{ post.data.title }}">
     <div class="post-card-image">
       {% if post.data.cover %}
@@ -18,9 +18,10 @@
       {% if post.data.opis %}
       <p class="post-card-opis">{{ post.data.opis }}</p>
       {% endif %}
-      {% if post.data.tagi %}
+      {% set postTagi = post.data.tagi | normalizeTagi %}
+      {% if postTagi.length %}
       <div class="post-card-tagi">
-        {% for tag in post.data.tagi %}
+        {% for tag in postTagi %}
         <a href="/posty/tag/{{ tag | slugify }}/" class="tag" aria-label="Tag: {{ tag }}">{{ tag }}</a>
         {% endfor %}
       </div>

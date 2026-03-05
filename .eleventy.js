@@ -1,5 +1,16 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
+// Normalize tagi: Pages CMS may save tags as a string like "[tag1,tag2]" instead of a YAML array
+function normalizeTagi(tagi) {
+  if (!tagi) return [];
+  if (Array.isArray(tagi)) return tagi;
+  const s = String(tagi).trim();
+  if (s.startsWith("[") && s.endsWith("]")) {
+    return s.slice(1, -1).split(",").map(t => t.trim().replace(/^["']|["']$/g, "")).filter(Boolean);
+  }
+  return [s].filter(Boolean);
+}
+
 module.exports = function(eleventyConfig) {
   // Rewrite URLs in HTML output to include pathPrefix
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -17,9 +28,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("tagi", function(collectionApi) {
     let tagsSet = new Set();
     collectionApi.getFilteredByGlob("src/posty/*.md").forEach(item => {
-      if (item.data.tagi) {
-        item.data.tagi.forEach(tag => tagsSet.add(tag));
-      }
+      const tagi = normalizeTagi(item.data.tagi);
+      tagi.forEach(tag => tagsSet.add(tag));
     });
     return [...tagsSet].sort();
   });
@@ -43,8 +53,10 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("filterByTag", function(posts, tag) {
-    return posts.filter(post => post.data.tagi && post.data.tagi.includes(tag));
+    return posts.filter(post => normalizeTagi(post.data.tagi).includes(tag));
   });
+
+  eleventyConfig.addFilter("normalizeTagi", normalizeTagi);
 
   return {
     dir: {
