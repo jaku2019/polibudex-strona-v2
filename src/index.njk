@@ -3,22 +3,28 @@ layout: layouts/base.njk
 title: Strona główna
 ---
 
-<!-- Hero Section -->
-<section class="hero" aria-label="Baner główny">
-  <div class="hero-inner container">
-    <div class="hero-content">
-      <h1 class="hero-title">{{ homepage.hero_tytul }}</h1>
-      <p class="hero-slogan">{{ homepage.hero_slogan }}</p>
-      <div class="hero-cta-group">
-        <a href="{{ homepage.hero_cta_link }}" class="btn btn-primary btn-lg">
-          {{ homepage.hero_cta_tekst }}
-        </a>
-        <a href="/posty/" class="btn btn-secondary btn-lg">Nasz blog</a>
-      </div>
+<!-- Hero / Splash Section -->
+<section class="hero hero-splash" aria-label="Baner główny">
+  <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+
+  <div class="hero-splash-inner">
+    <div class="hero-splash-logo">
+      <img src="/assets/images/polibudex_transparent_color.png" alt="{{ site.nazwa }}" width="320" height="33">
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <img src="/assets/images/logo.svg" alt="" width="200" height="200">
+    <h1 class="hero-splash-title">{{ homepage.hero_slogan }}</h1>
+    <p class="hero-splash-subtitle">Organizacja studencka łącząca pasję do nauki<br>z budowaniem wyjątkowej społeczności akademickiej.</p>
+    <div class="hero-cta-group hero-cta-group--centered">
+      <a href="{{ homepage.hero_cta_link }}" class="btn btn-primary btn-lg btn-pill">
+        {{ homepage.hero_cta_tekst }}
+      </a>
+      <a href="/posty/" class="btn btn-ghost btn-lg btn-pill">Nasz blog</a>
     </div>
+  </div>
+
+  <div class="hero-scroll-indicator" aria-hidden="true">
+    <span></span>
   </div>
 </section>
 
