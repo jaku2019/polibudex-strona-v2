@@ -187,7 +187,6 @@ p:last-child {
 .navbar-brand img {
   height: 36px;
   width: auto;
-  border-radius: 4px;
 }
 
 .navbar-menu {
@@ -320,10 +319,24 @@ p:last-child {
 }
 
 .hero-splash-logo img {
-  max-width: 300px;
+  max-width: 520px;
   height: auto;
   opacity: 0.97;
   filter: drop-shadow(0 4px 24px rgba(88, 166, 255, 0.35));
+  animation: logoEmerge 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes logoEmerge {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+    filter: drop-shadow(0 4px 24px rgba(88, 166, 255, 0)) blur(6px);
+  }
+  to {
+    opacity: 0.97;
+    transform: scale(1);
+    filter: drop-shadow(0 4px 24px rgba(88, 166, 255, 0.35)) blur(0px);
+  }
 }
 
 .hero-splash-title {
@@ -1236,7 +1249,7 @@ p:last-child {
 }
 
 .hero-splash-inner {
-  animation: fadeInUp 0.6s ease forwards;
+  animation: none;
 }
 
 /* ==========================================
@@ -1316,7 +1329,7 @@ p:last-child {
   }
 
   .hero-splash-logo img {
-    max-width: 220px;
+    max-width: 320px;
   }
 
   .hero-cta-group {
