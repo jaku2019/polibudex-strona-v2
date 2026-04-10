@@ -150,7 +150,7 @@ p:last-child {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-primary);
+  background-color: #070c1b;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   height: var(--navbar-height);
   display: flex;
